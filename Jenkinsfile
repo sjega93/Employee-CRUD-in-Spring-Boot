@@ -13,7 +13,9 @@ pipeline{
                         }
                 stage('Build'){
                         steps{
-                                sh 'mvn clean install'
+                                script{
+                                        dockerImage=docker.build "sathishtest"
+                              
                         }
                 }
         }
