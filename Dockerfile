@@ -1,3 +1,3 @@
 # Build the application first using Maven
-FROM maven:latest 
+FROM maven:eclipse-temurin
 
