@@ -10,5 +10,7 @@ import com.ahmadsolehin.SUSAHCRUDNIE.model.Employee;
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
     List<Employee> findByNameContaining(String q);
+    Employee findOneById(int id);
+    void deleteById (Integer id);
 
 }

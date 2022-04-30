@@ -11,5 +11,5 @@ public interface EmployeeService {
 
     void save(Employee contact);
 
-    void delete(int id);
+    void delete(Integer id);
 }

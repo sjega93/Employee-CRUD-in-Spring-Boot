@@ -1,6 +1,6 @@
 package com.ahmadsolehin.SUSAHCRUDNIE.controller;
 
-import javax.validation.Valid;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee/save")
-    public String save(@Valid Employee employee, BindingResult result, RedirectAttributes redirect) {
+    public String save(Employee employee, BindingResult result, RedirectAttributes redirect) {
         if (result.hasErrors()) {
             return "form";
         }
