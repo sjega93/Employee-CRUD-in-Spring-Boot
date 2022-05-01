@@ -3,6 +3,7 @@ pipeline{
                 tools { 
                 maven 'default' 
                 jdk 'jdk9' 
+                dockerTool 'docker'
                 }
         stages {
                 stage('Checkout'){
@@ -13,10 +14,7 @@ pipeline{
                         }
                 stage('Build'){
                         steps{
-                                script{
-                                        dockerImage=docker.build "sathishtest"
-                              
-                        }
+                                sh 'docker version'
                 }
         }
 }
