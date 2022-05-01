@@ -1,2 +1,2 @@
-FROM maven:eclipse-temurin
+FROM maven:latest
 
