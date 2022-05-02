@@ -4,14 +4,15 @@ services:
     image: mariadb:latest
     container_name: mysqldb
     restart: unless-stopped
-    env_file: ./.env
     environment:
-      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
-      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_PASSWORD=root
+      - MARIADB_DATABASE=springbootemployee
+      - MARIADB_USER=root
     networks:
       - app
     ports:
-      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+      - 3306:3306
     volumes:
       - db:/var/lib/mysql
   app:
@@ -22,12 +23,12 @@ services:
     restart: on-failure
     env_file: ./.env
     ports:
-      - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
+      - 8080:8080
     environment:
       SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mariadb://mysqldb:3306/?useSSL=false",
-        "spring.datasource.username" : "$MYSQLDB_USER",
-        "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD",
+        "spring.datasource.username" : "root",
+        "spring.datasource.password" : "root",
         "spring.datasource.driver-class-name" : "org.mariadb.jdbc.Driver",
         "spring.jpa.hibernate.ddl-auto" : "create-drop"
       }'
