@@ -25,8 +25,7 @@ services:
         "spring.datasource.username" : "$MYSQLDB_USER",
         "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD",
         "spring.datasource.driver-class-name" : "org.mariadb.jdbc.Driver",
-        "spring.jpa.database-platform" : "mariadb",
-        "spring.jpa.hibernate.ddl-auto" : "update"
+        "spring.jpa.hibernate.ddl-auto" : "create-drop"
       }'
     volumes:
       - .m2:/root/.m2
