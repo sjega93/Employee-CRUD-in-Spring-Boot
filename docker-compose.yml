@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
        MARIADB_DATABASE: springbootemployee
-      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: yes
+       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: yes
 
 
     networks:
