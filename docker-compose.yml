@@ -11,8 +11,6 @@ services:
       - app
     ports:
       - '3306:3306'
-    volumes:
-      - db:/var/lib/mysql
   app:
     depends_on:
       - mariadb
@@ -22,12 +20,9 @@ services:
       - '8080:8080'
     networks:
       - app
-    volumes:
-      - .m2:/root/.m2
     stdin_open: true
     tty: true
 networks:
    app:
       driver: bridge
-volumes:
-  db:
+
