@@ -5,9 +5,10 @@ services:
     container_name: mysqldb
     restart: unless-stopped
     environment:
-       MARIADB_PASSWORD: root
-       MARIADB_DATABASE: springbootemployee
-       MARIADB_USER: root
+       MYSQL_PASSWORD: root
+       MYSQL_DATABASE: springbootemployee
+       MYSQL_USER: root
+       MYSQL_ROOT_PASSWORD: root
     networks:
       - app
     ports:
