@@ -6,9 +6,9 @@ services:
     restart: unless-stopped
     environment:
        MARIADB_DATABASE: springbootemployee
-       MARIADB_USER: shoot
-       MARIADB_PASSWORD: shoot
-       MARIADB_ROOT_PASSWORD: shoot
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: yes
+
+
     networks:
       - app
     ports:
