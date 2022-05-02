@@ -2,6 +2,7 @@ version: "3.8"
 services:
   mariadb:
     image: mariadb:latest
+    container_name: mysqldb
     restart: unless-stopped
     env_file: ./.env
     environment:
@@ -16,7 +17,8 @@ services:
   app:
     depends_on:
       - mariadb
-    build: .
+    build: 
+      dockerfile: ./Dockerfile
     restart: on-failure
     env_file: ./.env
     ports:
