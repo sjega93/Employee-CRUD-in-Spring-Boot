@@ -5,7 +5,6 @@ services:
     container_name: mysqldb
     restart: unless-stopped
     environment:
-       MARIADB_ROOT_PASSWORD: root
        MARIADB_PASSWORD: root
        MARIADB_DATABASE: springbootemployee
        MARIADB_USER: root
