@@ -6,7 +6,8 @@ services:
     restart: unless-stopped
     environment:
        MYSQL_DATABASE: springbootemployee
-       MYSQL_ROOT_PASSWORD: root
+       MYSQL_USER: shoot
+       MYSQL_PASSWORD: shoot
     networks:
       - app
     ports:
