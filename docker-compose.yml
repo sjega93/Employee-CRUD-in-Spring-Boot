@@ -10,7 +10,7 @@ services:
     networks:
       - app
     ports:
-      - '3306:3306'
+      - '127.0.0.1:3306:3306'
   app:
     depends_on:
       - mariadb
