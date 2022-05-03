@@ -10,7 +10,7 @@ services:
       - MYSQL_USER=sjega93
       - MYSQL_PASSWORD=abc
     ports:
-      - 3303:3303
+      - '3303:3303'
   app:
     depends_on:
       - mariadb
