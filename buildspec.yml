@@ -1,10 +1,10 @@
 version: 0.2
 
 phases:
-pre_build:
-  commands:
-    - echo Logging in to Docker Hub...
-    - docker login -u sjega93 -p Ruby240895!
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+      - docker login -u sjega93 -p Ruby240895!
   build:
     commands:
       - echo Build started on `date`
