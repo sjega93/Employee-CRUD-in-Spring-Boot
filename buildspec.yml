@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t sjega93:latest .
+      - docker compose build
 
   post_build:
     commands:
