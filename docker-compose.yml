@@ -9,8 +9,6 @@ services:
       - MYSQL_DATABASE=springbootemployee
       - MYSQL_USER=sjega93
       - MYSQL_PASSWORD=abc
-    networks:
-      - app
     ports:
       - 3303:3303
   app:
@@ -20,11 +18,7 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8080:8080
-    networks:
-      - app
     stdin_open: true
     tty: true
-networks:
-   app:
-      driver: bridge
+
 
