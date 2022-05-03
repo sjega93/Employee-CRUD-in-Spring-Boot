@@ -18,6 +18,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8080:8080
+    links:
+      - mariadb:appdb
     stdin_open: true
     tty: true
 
