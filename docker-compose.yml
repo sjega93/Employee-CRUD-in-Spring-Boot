@@ -1,25 +1,25 @@
 version: "3.8"
 services:
   mariadb:
-    image: 'mariadb:latest'
+    image: mariadb:latest
     container_name: mysqldb
     restart: unless-stopped
     environment:
-       MARIADB_DATABASE: springbootemployee
-       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: yes
-
-
+      - MYSQL_ROOT_PASSWORD=shoot
+      - MYSQL_DATABASE=springbootemployee
+      - MYSQL_USER=sjega93
+      - MYSQL_PASSWORD=abc
     networks:
       - app
     ports:
-      - '127.0.0.1:3306:3306'
+      - 3306:3306
   app:
     depends_on:
       - mariadb
     build: 
       dockerfile: ./Dockerfile
     ports:
-      - '8080:8080'
+      - 8080:8080
     networks:
       - app
     stdin_open: true
