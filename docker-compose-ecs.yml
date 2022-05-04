@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mysqldb
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=shoot
+      - MYSQL_DATABASE=springbootemployee
+      - MYSQL_USER=sjega93
+      - MYSQL_PASSWORD=abc
+      - DATABASE_HOST:containername
+    ports:
+      - '3306:3306'
+  app:
+    depends_on:
+      - mariadb
+    restart: always
+    ports:
+      - 8080:8080
+    links:
+      - mariadb:appdb
+    stdin_open: true
+    tty: true
+
+
