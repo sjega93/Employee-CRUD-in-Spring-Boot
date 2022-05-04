@@ -16,8 +16,8 @@ services:
       - mariadb
     restart: always
     build:
-      context: app
-      dockerfile: ../app.Dockerfile
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 8080:8080
     links:
