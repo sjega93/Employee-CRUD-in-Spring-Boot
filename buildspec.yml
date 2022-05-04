@@ -6,7 +6,6 @@ phases:
       - echo Logging in to Docker Hub...
       - docker login -u sjega93 -p Ruby240895!
   build:
-    dockerfile: ./Dockerfile
     commands:
       - docker-compose build
 

@@ -15,8 +15,9 @@ services:
     depends_on:
       - mariadb
     restart: always
-    build: 
-      dockerfile: ./Dockerfile
+    build:
+      context: app
+      dockerfile: ../app.Dockerfile
     ports:
       - 8080:8080
     links:
