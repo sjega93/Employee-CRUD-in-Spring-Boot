@@ -14,5 +14,5 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker images
-      - -docker tag employee-crud-in-spring-boot_app:latest sjega93/test:latest
+      - docker tag employee-crud-in-spring-boot_app:latest sjega93/test:latest
       - docker push employee-crud-in-spring-boot_app:latest
