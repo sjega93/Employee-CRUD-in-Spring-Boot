@@ -15,4 +15,4 @@ phases:
       - echo Pushing the Docker image...
       - docker images
       - docker tag employee-crud-in-spring-boot_app:latest sjega93/test:latest
-      - docker push employee-crud-in-spring-boot_app:latest
+      - docker push sjega93/test:latest
