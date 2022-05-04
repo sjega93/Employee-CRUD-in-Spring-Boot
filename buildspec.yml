@@ -6,10 +6,9 @@ phases:
       - echo Logging in to Docker Hub...
       - docker login -u sjega93 -p Ruby240895!
   build:
+    dockerfile: ./Dockerfile
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker-compose build ./docker-compose.yml
+      - docker-compose build
 
   post_build:
     commands:
