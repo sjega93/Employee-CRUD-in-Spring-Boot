@@ -7,12 +7,11 @@ phases:
       - docker login -u sjega93 -p Ruby240895!
   build:
     commands:
-      - docker build .
+      - docker build -t sjega93/test:latest .
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker images
-      - docker tag employee-crud-in-spring-boot_app:latest sjega93/test:latest
       - docker push sjega93/test:latest
