@@ -9,5 +9,6 @@ FROM openjdk:latest
 WORKDIR /app
 COPY --from=build /app/target/SUSAHCRUDNIE-0.0.1-SNAPSHOT.jar /app/app.jar
 EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["sh", "-c"]
 CMD ["java -jar app.jar"]
