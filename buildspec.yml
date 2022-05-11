@@ -7,11 +7,11 @@ phases:
       - docker login -u sjega93 -p Ruby240895!
   build:
     commands:
-      - docker build -t sjega93/test:version3 .
+      - docker build -t sjega93/test:versionLookForP8081 .
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker images
-      - docker push sjega93/test:version3
+      - docker push sjega93/test:versionLookForP8081
