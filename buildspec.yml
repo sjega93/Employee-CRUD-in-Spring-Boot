@@ -12,7 +12,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - docker tag
       - echo Pushing the Docker image...
       - docker images
       - docker push sjega93/test:version3
