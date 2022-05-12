@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Docker Hub...
-      - docker login -u env('DOCKERHUBLOGIN') -p env('DOCKERHUBPW')
+      - docker login -u sjega93 -p Ruby240895!
   build:
     commands:
       - docker build -t sjega93/test:versionSearchP8081 .
